@@ -34,10 +34,10 @@
             this.txtPolumjer = new System.Windows.Forms.TextBox();
             this.txtPovrsina = new System.Windows.Forms.TextBox();
             this.txtOpseg = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.chkSpremi = new System.Windows.Forms.CheckBox();
             this.btnIzracunaj = new System.Windows.Forms.Button();
             this.btnOcisti = new System.Windows.Forms.Button();
+            this.lstRezultati = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // lblPolumjer
@@ -96,13 +96,6 @@
             this.txtOpseg.Text = "0,00";
             this.txtOpseg.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(205, 6);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(136, 20);
-            this.textBox1.TabIndex = 6;
-            // 
             // chkSpremi
             // 
             this.chkSpremi.AutoSize = true;
@@ -121,6 +114,7 @@
             this.btnIzracunaj.TabIndex = 8;
             this.btnIzracunaj.Text = "Izračunaj";
             this.btnIzracunaj.UseVisualStyleBackColor = true;
+            this.btnIzracunaj.Click += new System.EventHandler(this.btnIzracunaj_Click);
             // 
             // btnOcisti
             // 
@@ -130,23 +124,33 @@
             this.btnOcisti.TabIndex = 9;
             this.btnOcisti.Text = "Očisti";
             this.btnOcisti.UseVisualStyleBackColor = true;
+            this.btnOcisti.Click += new System.EventHandler(this.btnOcisti_Click);
             // 
-            // Form1
+            // lstRezultati
+            // 
+            this.lstRezultati.FormattingEnabled = true;
+            this.lstRezultati.Location = new System.Drawing.Point(200, 6);
+            this.lstRezultati.Name = "lstRezultati";
+            this.lstRezultati.Size = new System.Drawing.Size(136, 82);
+            this.lstRezultati.TabIndex = 10;
+            this.lstRezultati.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstRezultati_MouseDoubleClick);
+            // 
+            // frmGlavna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(368, 195);
+            this.Controls.Add(this.lstRezultati);
             this.Controls.Add(this.btnOcisti);
             this.Controls.Add(this.btnIzracunaj);
             this.Controls.Add(this.chkSpremi);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtOpseg);
             this.Controls.Add(this.txtPovrsina);
             this.Controls.Add(this.txtPolumjer);
             this.Controls.Add(this.lblOpseg);
             this.Controls.Add(this.lblPovrsina);
             this.Controls.Add(this.lblPolumjer);
-            this.Name = "Form1";
+            this.Name = "frmGlavna";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -161,10 +165,10 @@
         private System.Windows.Forms.TextBox txtPolumjer;
         private System.Windows.Forms.TextBox txtPovrsina;
         private System.Windows.Forms.TextBox txtOpseg;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.CheckBox chkSpremi;
         private System.Windows.Forms.Button btnIzracunaj;
         private System.Windows.Forms.Button btnOcisti;
+        private System.Windows.Forms.ListBox lstRezultati;
     }
 }
 
